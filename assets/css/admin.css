@@ -1,0 +1,126 @@
+.wrmp-admin-intro {
+	max-width: 900px;
+	margin: 12px 0 18px;
+	font-size: 14px;
+}
+
+.wrmp-admin-shortcode-card {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 12px 14px;
+	margin: 0 0 18px;
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 6px;
+}
+
+.wrmp-admin-shortcode-card code {
+	padding: 2px 6px;
+	background: #f6f7f7;
+}
+
+.wrmp-admin .form-table {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 8px;
+}
+
+.wrmp-admin .form-table th,
+.wrmp-admin .form-table td {
+	padding: 18px 20px;
+}
+
+.wrmp-admin .wrmp-logo-preview img {
+	display: block;
+	max-width: 140px;
+	height: auto;
+	margin-top: 12px;
+}
+
+.wrmp-logo-preview {
+	min-height: 28px;
+	margin-top: 12px;
+}
+
+.wrmp-empty-preview {
+	display: inline-block;
+	color: #646970;
+	font-style: italic;
+}
+
+.wrmp-color-field {
+	width: 120px;
+	min-height: 40px;
+	padding: 2px;
+}
+
+.wrmp-category-selector {
+	max-width: 640px;
+	padding: 14px;
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 6px;
+}
+
+.wrmp-category-actions {
+	display: flex;
+	gap: 8px;
+	margin-bottom: 12px;
+}
+
+.wrmp-category-tree {
+	max-height: 320px;
+	overflow: auto;
+	padding: 8px 12px;
+	border: 1px solid #e2e4e7;
+	border-radius: 4px;
+	background: #fbfbfb;
+}
+
+.wrmp-category-checklist {
+	margin: 0;
+	padding-left: 18px;
+}
+
+.wrmp-category-checklist li {
+	margin: 8px 0;
+}
+
+.wrmp-category-checklist label {
+	display: inline-flex;
+	align-items: center;
+}
+
+.wrmp-category-name {
+	margin-left: 6px;
+}
+
+.wrmp-category-thumb {
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	margin-left: 10px;
+	object-fit: cover;
+	border-radius: 6px;
+	vertical-align: middle;
+}
+
+.rtl .wrmp-admin .form-table th {
+	text-align: right;
+}
+
+.rtl .wrmp-category-checklist {
+	padding-left: 0;
+	padding-right: 18px;
+}
+
+.rtl .wrmp-category-name {
+	margin-left: 0;
+	margin-right: 6px;
+}
+
+.rtl .wrmp-category-thumb {
+	margin-left: 0;
+	margin-right: 10px;
+}

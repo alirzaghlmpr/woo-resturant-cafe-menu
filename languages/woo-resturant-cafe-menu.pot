@@ -1,0 +1,253 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Woo Resturant Cafe Menu 0.1.0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: woo-resturant-cafe-menu\n"
+
+msgid "Restaurant Menu"
+msgstr ""
+
+msgid "General Settings"
+msgstr ""
+
+msgid "Restaurant Name"
+msgstr ""
+
+msgid "Logo"
+msgstr ""
+
+msgid "Primary Color"
+msgstr ""
+
+msgid "Secondary Color"
+msgstr ""
+
+msgid "Menu Source"
+msgstr ""
+
+msgid "Product Categories"
+msgstr ""
+
+msgid "Ordering"
+msgstr ""
+
+msgid "Enable Ordering & Payment"
+msgstr ""
+
+msgid "Enable Dedicated Menu Page"
+msgstr ""
+
+msgid "Dedicated Menu Page"
+msgstr ""
+
+msgid "Menu page created or updated."
+msgstr ""
+
+msgid "Woo Resturant Cafe Menu"
+msgstr ""
+
+msgid "Create / Refresh Menu Page"
+msgstr ""
+
+msgid "Enabled"
+msgstr ""
+
+msgid "Choose Logo"
+msgstr ""
+
+msgid "Remove Logo"
+msgstr ""
+
+msgid "No product categories found."
+msgstr ""
+
+msgid "Selected categories and their child categories appear in the restaurant menu."
+msgstr ""
+
+msgid "Select a page"
+msgstr ""
+
+msgid "Select Logo"
+msgstr ""
+
+msgid "Use Logo"
+msgstr ""
+
+msgid "Configure your restaurant branding, choose WooCommerce categories, and control whether customers can place dine-in or delivery orders."
+msgstr ""
+
+msgid "Configure your restaurant branding, choose WooCommerce categories, and build a fast AJAX menu page."
+msgstr ""
+
+msgid "Shortcode"
+msgstr ""
+
+msgid "Use this shortcode on any page, or enable the dedicated menu page below."
+msgstr ""
+
+msgid "Shown at the top of the menu page and shortcode output."
+msgstr ""
+
+msgid "Optional. Example: yourrestaurant"
+msgstr ""
+
+msgid "Optional. Displayed in the custom menu sidebar."
+msgstr ""
+
+msgid "Customers can add products to cart and pay through WooCommerce."
+msgstr ""
+
+msgid "Maintain a dedicated WordPress page containing the restaurant menu shortcode."
+msgstr ""
+
+msgid "No logo selected yet."
+msgstr ""
+
+msgid "Recommended for the menu header and dedicated restaurant page."
+msgstr ""
+
+msgid "Background Color"
+msgstr ""
+
+msgid "Text Color"
+msgstr ""
+
+msgid "Instagram ID"
+msgstr ""
+
+msgid "Phone Number"
+msgstr ""
+
+msgid "Select All"
+msgstr ""
+
+msgid "Clear"
+msgstr ""
+
+msgid "Edit selected page"
+msgstr ""
+
+msgid "View selected page"
+msgstr ""
+
+msgid "Loading menu items..."
+msgstr ""
+
+msgid "Could not load menu items."
+msgstr ""
+
+msgid "Invalid menu category."
+msgstr ""
+
+msgid "Menu Categories"
+msgstr ""
+
+msgid "No products found in this category."
+msgstr ""
+
+msgid "Instagram"
+msgstr ""
+
+msgid "Phone"
+msgstr ""
+
+msgid "Card Styles"
+msgstr ""
+
+msgid "Category Card Background"
+msgstr ""
+
+msgid "Category Card Text Color"
+msgstr ""
+
+msgid "Category Hover Background"
+msgstr ""
+
+msgid "Category Hover Text Color"
+msgstr ""
+
+msgid "Product Card Background"
+msgstr ""
+
+msgid "Product Card Text Color"
+msgstr ""
+
+msgid "Used on the custom menu cards in the frontend layout."
+msgstr ""
+
+msgid "Category Inactive Background"
+msgstr ""
+
+msgid "Category Inactive Text Color"
+msgstr ""
+
+msgid "Product Name Color"
+msgstr ""
+
+msgid "Product Price Color"
+msgstr ""
+
+msgid "Product Description Color"
+msgstr ""
+
+msgid "Woo Resturant Cafe Menu requires WooCommerce to be active."
+msgstr ""
+
+msgid "Table Number"
+msgstr ""
+
+msgid "Enter your table number"
+msgstr ""
+
+msgid "Order Type"
+msgstr ""
+
+msgid "Dine-in"
+msgstr ""
+
+msgid "Delivery"
+msgstr ""
+
+msgid "Please enter your table number for dine-in orders."
+msgstr ""
+
+msgid "first name"
+msgstr ""
+
+msgid "last name"
+msgstr ""
+
+msgid "phone number"
+msgstr ""
+
+msgid "address"
+msgstr ""
+
+msgid "city"
+msgstr ""
+
+msgid "Please enter your %s for delivery orders."
+msgstr ""
+
+msgid "Order Type:"
+msgstr ""
+
+msgid "Table Number:"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "View-only menu. Ordering is currently disabled."
+msgstr ""
+
+msgid "No menu categories selected yet."
+msgstr ""
+
+msgid "View Product"
+msgstr ""
+
+msgid "Displays a WooCommerce-powered restaurant menu with optional ordering, dine-in, and delivery flows."
+msgstr ""

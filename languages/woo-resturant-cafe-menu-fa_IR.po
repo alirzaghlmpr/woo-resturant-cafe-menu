@@ -1,0 +1,259 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Woo Resturant Cafe Menu 0.1.0\n"
+"POT-Creation-Date: 2025-02-14 00:00+0000\n"
+"PO-Revision-Date: 2026-07-25 00:00+0000\n"
+"Last-Translator: OpenAI\n"
+"Language-Team: Persian\n"
+"Language: fa_IR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Domain: woo-resturant-cafe-menu\n"
+
+msgid "Restaurant Menu"
+msgstr "منوی رستوران"
+
+msgid "General Settings"
+msgstr "تنظیمات عمومی"
+
+msgid "Restaurant Name"
+msgstr "نام رستوران"
+
+msgid "Logo"
+msgstr "لوگو"
+
+msgid "Primary Color"
+msgstr "رنگ اصلی"
+
+msgid "Secondary Color"
+msgstr "رنگ دوم"
+
+msgid "Menu Source"
+msgstr "منبع منو"
+
+msgid "Product Categories"
+msgstr "دسته‌بندی‌های محصولات"
+
+msgid "Ordering"
+msgstr "سفارش‌گیری"
+
+msgid "Enable Ordering & Payment"
+msgstr "فعال‌سازی سفارش و پرداخت"
+
+msgid "Enable Dedicated Menu Page"
+msgstr "فعال‌سازی صفحه اختصاصی منو"
+
+msgid "Dedicated Menu Page"
+msgstr "صفحه اختصاصی منو"
+
+msgid "Menu page created or updated."
+msgstr "صفحه منو ایجاد یا به‌روزرسانی شد."
+
+msgid "Woo Resturant Cafe Menu"
+msgstr "منوی کافه و رستوران وو"
+
+msgid "Create / Refresh Menu Page"
+msgstr "ایجاد / نوسازی صفحه منو"
+
+msgid "Enabled"
+msgstr "فعال"
+
+msgid "Choose Logo"
+msgstr "انتخاب لوگو"
+
+msgid "Remove Logo"
+msgstr "حذف لوگو"
+
+msgid "No product categories found."
+msgstr "هیچ دسته‌بندی محصولی پیدا نشد."
+
+msgid "Selected categories and their child categories appear in the restaurant menu."
+msgstr "دسته‌بندی‌های انتخاب‌شده و زیر‌دسته‌های آن‌ها در منوی رستوران نمایش داده می‌شوند."
+
+msgid "Select a page"
+msgstr "یک برگه انتخاب کنید"
+
+msgid "Select Logo"
+msgstr "انتخاب لوگو"
+
+msgid "Use Logo"
+msgstr "استفاده از لوگو"
+
+msgid "Configure your restaurant branding, choose WooCommerce categories, and control whether customers can place dine-in or delivery orders."
+msgstr "برندینگ رستوران را تنظیم کنید، دسته‌بندی‌های ووکامرس را انتخاب کنید و یک صفحه منوی سریع مبتنی بر ایجکس بسازید."
+
+msgid "Configure your restaurant branding, choose WooCommerce categories, and build a fast AJAX menu page."
+msgstr "برندینگ رستوران را تنظیم کنید، دسته‌بندی‌های ووکامرس را انتخاب کنید و یک صفحه منوی سریع مبتنی بر ایجکس بسازید."
+
+msgid "Shortcode"
+msgstr "شورت‌کد"
+
+msgid "Use this shortcode on any page, or enable the dedicated menu page below."
+msgstr "این شورت‌کد را در هر برگه‌ای استفاده کنید یا صفحه اختصاصی منو را در پایین فعال کنید."
+
+msgid "Shown at the top of the menu page and shortcode output."
+msgstr "در بالای صفحه منو و خروجی شورت‌کد نمایش داده می‌شود."
+
+msgid "Optional. Example: yourrestaurant"
+msgstr "اختیاری. مثال: yourrestaurant"
+
+msgid "Optional. Displayed in the custom menu sidebar."
+msgstr "اختیاری. در سایدبار منوی سفارشی نمایش داده می‌شود."
+
+msgid "Customers can add products to cart and pay through WooCommerce."
+msgstr "مشتریان می‌توانند محصولات را به سبد خرید اضافه کرده و از طریق ووکامرس پرداخت کنند."
+
+msgid "Maintain a dedicated WordPress page containing the restaurant menu shortcode."
+msgstr "یک برگه اختصاصی وردپرس شامل شورت‌کد منوی رستوران نگهداری شود."
+
+msgid "No logo selected yet."
+msgstr "هنوز لوگویی انتخاب نشده است."
+
+msgid "Recommended for the menu header and dedicated restaurant page."
+msgstr "برای هدر منو و صفحه اختصاصی رستوران پیشنهاد می‌شود."
+
+msgid "Background Color"
+msgstr "رنگ پس‌زمینه"
+
+msgid "Text Color"
+msgstr "رنگ متن"
+
+msgid "Instagram ID"
+msgstr "شناسه اینستاگرام"
+
+msgid "Phone Number"
+msgstr "شماره تلفن"
+
+msgid "Select All"
+msgstr "انتخاب همه"
+
+msgid "Clear"
+msgstr "پاک کردن"
+
+msgid "Edit selected page"
+msgstr "ویرایش برگه انتخاب‌شده"
+
+msgid "View selected page"
+msgstr "مشاهده برگه انتخاب‌شده"
+
+msgid "Loading menu items..."
+msgstr "در حال بارگذاری آیتم‌های منو..."
+
+msgid "Could not load menu items."
+msgstr "بارگذاری آیتم‌های منو انجام نشد."
+
+msgid "Invalid menu category."
+msgstr "دسته‌بندی منوی نامعتبر است."
+
+msgid "Menu Categories"
+msgstr "دسته‌بندی‌های منو"
+
+msgid "No products found in this category."
+msgstr "هیچ محصولی در این دسته‌بندی پیدا نشد."
+
+msgid "Instagram"
+msgstr "اینستاگرام"
+
+msgid "Phone"
+msgstr "تلفن"
+
+msgid "Card Styles"
+msgstr "استایل کارت‌ها"
+
+msgid "Category Card Background"
+msgstr "پس‌زمینه کارت دسته‌بندی"
+
+msgid "Category Card Text Color"
+msgstr "رنگ متن کارت دسته‌بندی"
+
+msgid "Category Hover Background"
+msgstr "پس‌زمینه هاور دسته‌بندی"
+
+msgid "Category Hover Text Color"
+msgstr "رنگ متن هاور دسته‌بندی"
+
+msgid "Product Card Background"
+msgstr "پس‌زمینه کارت محصول"
+
+msgid "Product Card Text Color"
+msgstr "رنگ متن کارت محصول"
+
+msgid "Used on the custom menu cards in the frontend layout."
+msgstr "در کارت‌های منوی سفارشی در نمای کاربری استفاده می‌شود."
+
+msgid "Category Inactive Background"
+msgstr "پس‌زمینه دسته‌بندی غیرفعال"
+
+msgid "Category Inactive Text Color"
+msgstr "رنگ متن دسته‌بندی غیرفعال"
+
+msgid "Product Name Color"
+msgstr "رنگ نام محصول"
+
+msgid "Product Price Color"
+msgstr "رنگ قیمت محصول"
+
+msgid "Product Description Color"
+msgstr "رنگ توضیحات محصول"
+
+msgid "Woo Resturant Cafe Menu requires WooCommerce to be active."
+msgstr "برای استفاده از منوی کافه و رستوران وو، افزونه ووکامرس باید فعال باشد."
+
+msgid "Table Number"
+msgstr "شماره میز"
+
+msgid "Enter your table number"
+msgstr "شماره میز خود را وارد کنید"
+
+msgid "Order Type"
+msgstr "نوع سفارش"
+
+msgid "Dine-in"
+msgstr "سرو در رستوران"
+
+msgid "Delivery"
+msgstr "ارسال"
+
+msgid "Please enter your table number for dine-in orders."
+msgstr "لطفاً برای سفارش‌های سرو در رستوران، شماره میز را وارد کنید."
+
+msgid "first name"
+msgstr "نام"
+
+msgid "last name"
+msgstr "نام خانوادگی"
+
+msgid "phone number"
+msgstr "شماره تلفن"
+
+msgid "address"
+msgstr "آدرس"
+
+msgid "city"
+msgstr "شهر"
+
+msgid "Please enter your %s for delivery orders."
+msgstr "لطفاً %s خود را برای سفارش‌های ارسالی وارد کنید."
+
+msgid "Order Type:"
+msgstr "نوع سفارش:"
+
+msgid "Table Number:"
+msgstr "شماره میز:"
+
+msgid "Save"
+msgstr "ذخیره"
+
+msgid "View-only menu. Ordering is currently disabled."
+msgstr "منو فقط برای مشاهده است. سفارش‌گیری در حال حاضر غیرفعال است."
+
+msgid "No menu categories selected yet."
+msgstr "هنوز هیچ دسته‌بندی برای منو انتخاب نشده است."
+
+msgid "View Product"
+msgstr "مشاهده محصول"
+
+msgid "Displays a WooCommerce-powered restaurant menu with optional ordering, dine-in, and delivery flows."
+msgstr "یک منوی رستورانی مبتنی بر ووکامرس با امکان اختیاری سفارش‌گیری، سرو در رستوران و ارسال نمایش می‌دهد."
