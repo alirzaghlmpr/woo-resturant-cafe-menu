@@ -54,7 +54,54 @@ class WRMP_Admin_Settings {
 		add_settings_field( 'instagram_id', __( 'Instagram ID', 'woo-resturant-cafe-menu' ), array( $this, 'render_text_field' ), 'wrmp-settings', 'wrmp_general', array( 'key' => 'instagram_id' ) );
 		add_settings_field( 'phone_number', __( 'Phone Number', 'woo-resturant-cafe-menu' ), array( $this, 'render_text_field' ), 'wrmp-settings', 'wrmp_general', array( 'key' => 'phone_number' ) );
 
-		add_settings_section( 'wrmp_style_cards', __( 'Card Styles', 'woo-resturant-cafe-menu' ), '__return_false', 'wrmp-settings' );
+		add_settings_section( 'wrmp_layout', __( 'Sizes', 'woo-resturant-cafe-menu' ), '__return_false', 'wrmp-settings' );
+		add_settings_field(
+			'logo_size',
+			__( 'Logo Size', 'woo-resturant-cafe-menu' ),
+			array( $this, 'render_number_group_field' ),
+			'wrmp-settings',
+			'wrmp_layout',
+			array(
+				'fields'      => array(
+					array( 'key' => 'logo_width', 'label' => __( 'Desktop width', 'woo-resturant-cafe-menu' ), 'min' => 16, 'max' => 400 ),
+					array( 'key' => 'logo_height', 'label' => __( 'Desktop height', 'woo-resturant-cafe-menu' ), 'min' => 0, 'max' => 400 ),
+					array( 'key' => 'logo_width_mobile', 'label' => __( 'Mobile width', 'woo-resturant-cafe-menu' ), 'min' => 16, 'max' => 400 ),
+					array( 'key' => 'logo_height_mobile', 'label' => __( 'Mobile height', 'woo-resturant-cafe-menu' ), 'min' => 0, 'max' => 400 ),
+				),
+				'description' => __( 'In pixels. Set a height of 0 to keep the logo proportions automatically.', 'woo-resturant-cafe-menu' ),
+			)
+		);
+		add_settings_field(
+			'product_image_mode',
+			__( 'Product Image Height Mode', 'woo-resturant-cafe-menu' ),
+			array( $this, 'render_select_field' ),
+			'wrmp-settings',
+			'wrmp_layout',
+			array(
+				'key'         => 'product_image_mode',
+				'options'     => array(
+					'fixed' => __( 'Fixed height (crops the image to fit)', 'woo-resturant-cafe-menu' ),
+					'auto'  => __( 'Auto (show the full image, no cropping)', 'woo-resturant-cafe-menu' ),
+				),
+				'description' => __( 'Auto sizes every product image to its own proportions, so the whole picture is always visible.', 'woo-resturant-cafe-menu' ),
+			)
+		);
+		add_settings_field(
+			'product_image_height',
+			__( 'Product Image Height', 'woo-resturant-cafe-menu' ),
+			array( $this, 'render_number_group_field' ),
+			'wrmp-settings',
+			'wrmp_layout',
+			array(
+				'fields'      => array(
+					array( 'key' => 'product_image_height', 'label' => __( 'Desktop', 'woo-resturant-cafe-menu' ), 'min' => 100, 'max' => 1200 ),
+					array( 'key' => 'product_image_height_mobile', 'label' => __( 'Mobile', 'woo-resturant-cafe-menu' ), 'min' => 80, 'max' => 800 ),
+				),
+				'description' => __( 'In pixels. Only used when the height mode is Fixed.', 'woo-resturant-cafe-menu' ),
+			)
+		);
+
+		add_settings_section( 'wrmp_style_cards',__( 'Card Styles', 'woo-resturant-cafe-menu' ), '__return_false', 'wrmp-settings' );
 		add_settings_field( 'category_card_inactive_background', __( 'Category Inactive Background', 'woo-resturant-cafe-menu' ), array( $this, 'render_text_field' ), 'wrmp-settings', 'wrmp_style_cards', array( 'key' => 'category_card_inactive_background', 'type' => 'color' ) );
 		add_settings_field( 'category_card_inactive_text_color', __( 'Category Inactive Text Color', 'woo-resturant-cafe-menu' ), array( $this, 'render_text_field' ), 'wrmp-settings', 'wrmp_style_cards', array( 'key' => 'category_card_inactive_text_color', 'type' => 'color' ) );
 		add_settings_field( 'category_card_background', __( 'Category Card Background', 'woo-resturant-cafe-menu' ), array( $this, 'render_text_field' ), 'wrmp-settings', 'wrmp_style_cards', array( 'key' => 'category_card_background', 'type' => 'color' ) );
@@ -133,6 +180,49 @@ class WRMP_Admin_Settings {
 			<p class="description"><?php esc_html_e( 'Optional. Displayed in the custom menu sidebar.', 'woo-resturant-cafe-menu' ); ?></p>
 		<?php elseif ( in_array( $key, array( 'category_card_background', 'category_card_text_color', 'category_card_inactive_background', 'category_card_inactive_text_color', 'product_card_background', 'product_card_text_color', 'product_name_color', 'product_price_color', 'product_description_color' ), true ) ) : ?>
 			<p class="description"><?php esc_html_e( 'Used on the custom menu cards in the frontend layout.', 'woo-resturant-cafe-menu' ); ?></p>
+		<?php endif; ?>
+		<?php
+	}
+
+	/**
+	 * Group of labelled number inputs.
+	 *
+	 * @param array $args Args.
+	 * @return void
+	 */
+	public function render_number_group_field( $args ) {
+		$settings = WRMP_Helpers::get_settings();
+		?>
+		<div class="wrmp-number-group">
+			<?php foreach ( $args['fields'] as $field ) : ?>
+				<label class="wrmp-number-field">
+					<span><?php echo esc_html( $field['label'] ); ?></span>
+					<input type="number" step="1" min="<?php echo esc_attr( $field['min'] ); ?>" max="<?php echo esc_attr( $field['max'] ); ?>" name="<?php echo esc_attr( WRMP_Helpers::OPTION_KEY . '[' . $field['key'] . ']' ); ?>" value="<?php echo esc_attr( $settings[ $field['key'] ] ); ?>">				</label>
+			<?php endforeach; ?>
+		</div>
+		<?php if ( ! empty( $args['description'] ) ) : ?>
+			<p class="description"><?php echo esc_html( $args['description'] ); ?></p>
+		<?php endif; ?>
+		<?php
+	}
+
+	/**
+	 * Select field.
+	 *
+	 * @param array $args Args.
+	 * @return void
+	 */
+	public function render_select_field( $args ) {
+		$key      = $args['key'];
+		$settings = WRMP_Helpers::get_settings();
+		?>
+		<select name="<?php echo esc_attr( WRMP_Helpers::OPTION_KEY . '[' . $key . ']' ); ?>">
+			<?php foreach ( $args['options'] as $value => $label ) : ?>
+				<option value="<?php echo esc_attr( $value ); ?>" <?php selected( $settings[ $key ], $value ); ?>><?php echo esc_html( $label ); ?></option>
+			<?php endforeach; ?>
+		</select>
+		<?php if ( ! empty( $args['description'] ) ) : ?>
+			<p class="description"><?php echo esc_html( $args['description'] ); ?></p>
 		<?php endif; ?>
 		<?php
 	}

@@ -55,6 +55,24 @@
 	padding: 2px;
 }
 
+.wrmp-number-group {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px 20px;
+}
+
+.wrmp-number-field {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	font-size: 12px;
+	color: #50575e;
+}
+
+.wrmp-number-field input {
+	width: 90px;
+}
+
 .wrmp-category-selector {
 	max-width: 640px;
 	padding: 14px;

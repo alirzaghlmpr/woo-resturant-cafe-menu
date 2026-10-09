@@ -21,6 +21,13 @@ class WRMP_Helpers {
 		return array(
 			'restaurant_name'   => get_bloginfo( 'name' ),
 			'logo_id'           => 0,
+			'logo_width'        => 72,
+			'logo_height'       => 0,
+			'logo_width_mobile' => 42,
+			'logo_height_mobile' => 0,
+			'product_image_mode'          => 'fixed',
+			'product_image_height'        => 380,
+			'product_image_height_mobile' => 240,
 			'primary_color'     => '#0d1b2a',
 			'secondary_color'   => '#1b9aaa',
 			'background_color'  => '#0d1b2a',
@@ -86,7 +93,14 @@ class WRMP_Helpers {
 		$settings = array(
 			'restaurant_name'   => sanitize_text_field( $input['restaurant_name'] ?? $defaults['restaurant_name'] ),
 			'logo_id'           => absint( $input['logo_id'] ?? $defaults['logo_id'] ),
-			'primary_color'     => sanitize_hex_color( $input['primary_color'] ?? $defaults['primary_color'] ) ?: $defaults['primary_color'],
+			'logo_width'        => self::sanitize_size( $input['logo_width'] ?? $defaults['logo_width'], 16, 400 ),
+			'logo_height'       => self::sanitize_size( $input['logo_height'] ?? $defaults['logo_height'], 0, 400 ),
+			'logo_width_mobile' => self::sanitize_size( $input['logo_width_mobile'] ?? $defaults['logo_width_mobile'], 16, 400 ),
+			'logo_height_mobile' => self::sanitize_size( $input['logo_height_mobile'] ?? $defaults['logo_height_mobile'], 0, 400 ),
+			'product_image_mode'          => in_array( $input['product_image_mode'] ?? '', array( 'fixed', 'auto' ), true ) ? $input['product_image_mode'] : $defaults['product_image_mode'],
+			'product_image_height'        => self::sanitize_size( $input['product_image_height'] ?? $defaults['product_image_height'], 100, 1200 ),
+			'product_image_height_mobile' => self::sanitize_size( $input['product_image_height_mobile'] ?? $defaults['product_image_height_mobile'], 80, 800 ),
+			'primary_color'    => sanitize_hex_color( $input['primary_color'] ?? $defaults['primary_color'] ) ?: $defaults['primary_color'],
 			'secondary_color'   => sanitize_hex_color( $input['secondary_color'] ?? $defaults['secondary_color'] ) ?: $defaults['secondary_color'],
 			'background_color'  => sanitize_hex_color( $input['background_color'] ?? $defaults['background_color'] ) ?: $defaults['background_color'],
 			'text_color'        => sanitize_hex_color( $input['text_color'] ?? $defaults['text_color'] ) ?: $defaults['text_color'],
@@ -109,6 +123,68 @@ class WRMP_Helpers {
 		);
 
 		return $settings;
+	}
+
+	/**
+	 * Clamp a pixel size to a range.
+	 *
+	 * @param mixed $value Raw value.
+	 * @param int   $min   Minimum.
+	 * @param int   $max   Maximum.
+	 * @return int
+	 */
+	protected static function sanitize_size( $value, $min, $max ) {
+		return min( $max, max( $min, absint( $value ) ) );
+	}
+
+	/**
+	 * CSS custom properties for the menu wrapper's inline style.
+	 *
+	 * Shared by the shortcode and standalone page templates.
+	 *
+	 * A height of 0 means "auto" (natural size); in auto image mode the
+	 * skeleton placeholders fall back to a fixed height since they have no
+	 * intrinsic size.
+	 *
+	 * @param array $settings Settings from get_settings().
+	 * @return string
+	 */
+	public static function get_inline_style( $settings ) {
+		$auto_image = 'auto' === $settings['product_image_mode'];
+
+		$vars = array(
+			'primary'                 => $settings['primary_color'],
+			'secondary'               => $settings['secondary_color'],
+			'background'              => $settings['background_color'],
+			'text'                    => $settings['text_color'],
+			'category-card-bg'        => $settings['category_card_background'],
+			'category-card-text'      => $settings['category_card_text_color'],
+			'category-card-inactive-bg'   => $settings['category_card_inactive_background'],
+			'category-card-inactive-text' => $settings['category_card_inactive_text_color'],
+			'category-card-hover-bg'  => $settings['category_card_hover_background'],
+			'category-card-hover-text' => $settings['category_card_hover_text_color'],
+			'product-card-bg'         => $settings['product_card_background'],
+			'product-card-text'       => $settings['product_card_text_color'],
+			'product-name-color'      => $settings['product_name_color'],
+			'product-price-color'     => $settings['product_price_color'],
+			'product-description-color' => $settings['product_description_color'],
+			'logo-width'              => absint( $settings['logo_width'] ) . 'px',
+			'logo-height'             => $settings['logo_height'] ? absint( $settings['logo_height'] ) . 'px' : 'auto',
+			'logo-width-mobile'       => absint( $settings['logo_width_mobile'] ) . 'px',
+			'logo-height-mobile'      => $settings['logo_height_mobile'] ? absint( $settings['logo_height_mobile'] ) . 'px' : 'auto',
+			'image-height'            => $auto_image ? 'auto' : absint( $settings['product_image_height'] ) . 'px',
+			'image-height-mobile'     => $auto_image ? 'auto' : absint( $settings['product_image_height_mobile'] ) . 'px',
+			'skeleton-image-height'   => $auto_image ? '300px' : absint( $settings['product_image_height'] ) . 'px',
+			'skeleton-image-height-mobile' => $auto_image ? '200px' : absint( $settings['product_image_height_mobile'] ) . 'px',
+		);
+
+		$style = '';
+
+		foreach ( $vars as $name => $value ) {
+			$style .= '--wrmp-' . $name . ': ' . $value . '; ';
+		}
+
+		return esc_attr( trim( $style ) );
 	}
 
 	/**

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Woo Resturant Cafe Menu 0.1.0\n"
+"Project-Id-Version: Woo Resturant Cafe Menu 0.2.0\n"
 "POT-Creation-Date: 2025-02-14 00:00+0000\n"
 "PO-Revision-Date: 2026-07-25 00:00+0000\n"
 "Last-Translator: OpenAI\n"
@@ -257,3 +257,48 @@ msgstr "مشاهده محصول"
 
 msgid "Displays a WooCommerce-powered restaurant menu with optional ordering, dine-in, and delivery flows."
 msgstr "یک منوی رستورانی مبتنی بر ووکامرس با امکان اختیاری سفارش‌گیری، سرو در رستوران و ارسال نمایش می‌دهد."
+
+msgid "Sizes"
+msgstr "اندازه‌ها"
+
+msgid "Logo Size"
+msgstr "اندازه لوگو"
+
+msgid "Desktop width"
+msgstr "عرض در دسکتاپ"
+
+msgid "Desktop height"
+msgstr "ارتفاع در دسکتاپ"
+
+msgid "Mobile width"
+msgstr "عرض در موبایل"
+
+msgid "Mobile height"
+msgstr "ارتفاع در موبایل"
+
+msgid "In pixels. Set a height of 0 to keep the logo proportions automatically."
+msgstr "به پیکسل. ارتفاع را ۰ بگذارید تا نسبت ابعاد لوگو به‌صورت خودکار حفظ شود."
+
+msgid "Product Image Height Mode"
+msgstr "حالت ارتفاع تصویر محصول"
+
+msgid "Fixed height (crops the image to fit)"
+msgstr "ارتفاع ثابت (تصویر برای جا شدن برش می‌خورد)"
+
+msgid "Auto (show the full image, no cropping)"
+msgstr "خودکار (نمایش کامل تصویر، بدون برش)"
+
+msgid "Auto sizes every product image to its own proportions, so the whole picture is always visible."
+msgstr "در حالت خودکار، ارتفاع هر تصویر متناسب با ابعاد خودش تنظیم می‌شود و کل تصویر همیشه دیده می‌شود."
+
+msgid "Product Image Height"
+msgstr "ارتفاع تصویر محصول"
+
+msgid "Desktop"
+msgstr "دسکتاپ"
+
+msgid "Mobile"
+msgstr "موبایل"
+
+msgid "In pixels. Only used when the height mode is Fixed."
+msgstr "به پیکسل. فقط در حالت «ارتفاع ثابت» استفاده می‌شود."

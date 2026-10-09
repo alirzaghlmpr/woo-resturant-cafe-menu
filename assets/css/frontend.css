@@ -72,54 +72,61 @@ body.wrmp-standalone-page .wrmp-menu-content::-webkit-scrollbar-thumb {
 }
 
 .wrmp-menu-logo {
-  max-width: 72px;
-  height: auto;
+  flex: 0 0 auto;
+  width: var(--wrmp-logo-width, 72px);
+  height: var(--wrmp-logo-height, auto);
+  max-width: 100%;
+  object-fit: contain;
   border-radius: 12px;
 }
 
 .wrmp-menu-sidebar {
-  width: 340px;
-  flex: 0 0 340px;
-  padding: 34px 24px;
+  width: 300px;
+  flex: 0 0 300px;
+  padding: 24px 18px;
   background: var(--wrmp-primary);
   color: #fff;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
 }
 
 .wrmp-brand-text {
+  flex: 1 1 60px;
+  min-width: 0;
   color: #fff;
 }
 
 .wrmp-menu-brand {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 18px;
+  gap: 12px;
 }
 
 .wrmp-menu-title {
   margin: 0;
   color: #fff;
-  font-size: 1.9rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
 }
 
 .wrmp-menu-contact {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 }
 
 .wrmp-contact-item {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
 }
 
 .wrmp-contact-label {
-  font-size: 0.82rem;
+  font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -127,14 +134,14 @@ body.wrmp-standalone-page .wrmp-menu-content::-webkit-scrollbar-thumb {
 }
 
 .wrmp-contact-value {
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 500;
 }
 
 .wrmp-menu-nav {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 12px;
+  gap: 10px;
   overflow: visible;
 }
 
@@ -143,8 +150,8 @@ body.wrmp-standalone-page .wrmp-menu-content::-webkit-scrollbar-thumb {
   display: flex !important;
   flex-direction: column !important;
   align-items: stretch;
-  gap: 12px;
-  padding: 12px;
+  gap: 8px;
+  padding: 10px;
   width: 100%;
   margin: 0;
   font: inherit;
@@ -154,7 +161,7 @@ body.wrmp-standalone-page .wrmp-menu-content::-webkit-scrollbar-thumb {
   -webkit-appearance: none;
   background-image: none !important;
   border: 1px solid rgba(255, 255, 255, 0.25) !important;
-  border-radius: 14px !important;
+  border-radius: 12px !important;
   background: var(--wrmp-category-card-inactive-bg) !important;
   color: var(--wrmp-category-card-inactive-text) !important;
   text-align: left;
@@ -207,21 +214,21 @@ body.wrmp-standalone-page .wrmp-menu-content::-webkit-scrollbar-thumb {
 
 .wrmp-menu-content {
   flex: 1;
-  padding: 42px min(4vw, 48px) 60px;
+  padding: 30px min(3vw, 36px) 48px;
 }
 
 .wrmp-menu-tab-thumb {
   width: 100%;
-  height: 120px;
+  height: 100px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 10px;
   background: rgba(255, 255, 255, 0.22);
   flex: 0 0 auto;
   transition: transform var(--wrmp-duration) var(--wrmp-ease);
 }
 
 .wrmp-menu-tab-text {
-  font-size: 1.02rem;
+  font-size: 0.88rem;
   font-weight: 600;
   line-height: 1.4;
   word-break: break-word;
@@ -229,26 +236,29 @@ body.wrmp-standalone-page .wrmp-menu-content::-webkit-scrollbar-thumb {
 }
 
 .wrmp-menu-content-header {
-  margin-bottom: 30px;
+  margin-bottom: 22px;
 }
 
 .wrmp-menu-section-title {
   margin: 0;
   color: var(--wrmp-secondary);
-  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-size: clamp(1.4rem, 2.2vw, 1.9rem);
   font-weight: 700;
 }
 
 .wrmp-menu-subnav {
   display: none;
-  flex-wrap: nowrap;
+  grid-template-rows: repeat(2, auto);
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
   align-items: center;
+  justify-content: start;
   gap: 8px;
-  margin-top: 16px;
+  margin-top: 12px;
   overflow-x: auto;
   overflow-y: hidden;
-  padding: 2px 4px 8px;
-  margin-inline: -4px;
+  padding: 4px 6px 8px;
+  margin-inline: -6px;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
   scrollbar-color: var(--wrmp-category-card-hover-bg) transparent;
@@ -257,7 +267,7 @@ body.wrmp-standalone-page .wrmp-menu-content::-webkit-scrollbar-thumb {
 }
 
 .wrmp-menu-subnav.has-children {
-  display: flex;
+  display: grid;
 }
 
 .wrmp-menu-subnav::-webkit-scrollbar {
@@ -271,12 +281,11 @@ body.wrmp-standalone-page .wrmp-menu-content::-webkit-scrollbar-thumb {
 
 .wrmp-subchip {
   display: inline-flex;
-  flex: 0 0 auto;
   align-items: center;
   margin: 0;
-  padding: 6px 16px;
+  padding: 5px 12px;
   font: inherit;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 600;
   white-space: nowrap;
   border-radius: 999px;
@@ -299,7 +308,7 @@ body.wrmp-standalone-page .wrmp-menu-content::-webkit-scrollbar-thumb {
 .wrmp-menu-subnav .wrmp-subchip:nth-child(4) { animation-delay: 0.14s; }
 .wrmp-menu-subnav .wrmp-subchip:nth-child(n + 5) { animation-delay: 0.18s; }
 
-.wrmp-subchip-skeleton {
+.wrmp-subchip.wrmp-subchip-skeleton {
   background: transparent;
   cursor: default;
   padding: 0;
@@ -307,8 +316,8 @@ body.wrmp-standalone-page .wrmp-menu-content::-webkit-scrollbar-thumb {
 
 .wrmp-skeleton-chip {
   display: inline-block;
-  width: 84px;
-  height: 32px;
+  width: 72px;
+  height: 28px;
   border-radius: 999px;
 }
 
@@ -333,17 +342,17 @@ body.wrmp-standalone-page .wrmp-menu-content::-webkit-scrollbar-thumb {
 
 .wrmp-menu-section-description {
   max-width: 720px;
-  margin: 12px 0 0;
-  font-size: 1rem;
-  line-height: 1.8;
+  margin: 10px 0 0;
+  font-size: 0.9rem;
+  line-height: 1.7;
   color: var(--wrmp-text);
   opacity: 0.85;
 }
 
 .wrmp-product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
 }
 
 .wrmp-product-card {
@@ -396,7 +405,7 @@ body.wrmp-standalone-page .wrmp-menu-content::-webkit-scrollbar-thumb {
 .wrmp-product-image {
   display: block;
   width: 100%;
-  height: 300px;
+  height: var(--wrmp-image-height, 380px);
   object-fit: cover;
   background: #fff;
   transition: transform 0.5s var(--wrmp-ease);
@@ -407,41 +416,41 @@ body.wrmp-standalone-page .wrmp-menu-content::-webkit-scrollbar-thumb {
 }
 
 .wrmp-product-body {
-  padding: 20px;
+  padding: 16px;
 }
 
 .wrmp-product-card > .wrmp-product-body:not(:first-child) {
-  padding-top: 22px;
+  padding-top: 18px;
   border-top: 1px dashed color-mix(in srgb, var(--wrmp-product-card-text) 22%, transparent);
 }
 
 .wrmp-product-meta {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .wrmp-product-price {
   margin: 0;
   color: var(--wrmp-product-price-color);
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1rem;
   order: 2;
 }
 
 .wrmp-product-title {
   margin: 0;
   color: var(--wrmp-product-name-color);
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   font-weight: 600;
   order: 1;
 }
 
 .wrmp-product-description {
-  margin-top: 14px;
+  margin-top: 10px;
   color: var(--wrmp-product-description-color);
-  font-size: 1rem;
-  line-height: 1.75;
+  font-size: 0.88rem;
+  line-height: 1.7;
 }
 
 .wrmp-product-description p {
@@ -467,7 +476,7 @@ body.wrmp-standalone-page .wrmp-menu-content::-webkit-scrollbar-thumb {
 }
 
 .wrmp-skeleton-image {
-  height: 300px;
+  height: var(--wrmp-skeleton-image-height, 380px);
   border-radius: 0;
 }
 
@@ -541,13 +550,13 @@ body.wrmp-standalone-page .wrmp-menu-content::-webkit-scrollbar-thumb {
   }
 
   .wrmp-menu-content {
-    padding: 28px 24px 50px;
+    padding: 24px 20px 40px;
   }
 
   .wrmp-menu-sidebar {
-    width: 280px;
-    flex: 0 0 280px;
-    padding: 20px 16px;
+    width: 240px;
+    flex: 0 0 240px;
+    padding: 18px 14px;
   }
 
   .wrmp-menu-nav {
@@ -555,23 +564,28 @@ body.wrmp-standalone-page .wrmp-menu-content::-webkit-scrollbar-thumb {
   }
 
   .wrmp-menu-tab-thumb {
-    height: 92px;
+    height: 80px;
+  }
+
+  .wrmp-product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   }
 }
 
 @media (max-width: 640px) {
   .wrmp-menu-title {
-    font-size: 1.2rem;
+    font-size: 0.95rem;
   }
 
   .wrmp-menu-content {
-    padding: 18px 12px 28px;
+    padding: 14px 10px 24px;
   }
 
   .wrmp-menu-sidebar {
-    width: 165px;
-    flex: 0 0 165px;
-    padding: 14px 10px;
+    width: 140px;
+    flex: 0 0 140px;
+    padding: 12px 8px;
+    gap: 12px;
   }
 
   .wrmp-product-grid {
@@ -579,9 +593,12 @@ body.wrmp-standalone-page .wrmp-menu-content::-webkit-scrollbar-thumb {
     gap: 14px;
   }
 
-  .wrmp-product-image,
+  .wrmp-product-image {
+    height: var(--wrmp-image-height-mobile, 240px);
+  }
+
   .wrmp-skeleton-image {
-    height: 170px;
+    height: var(--wrmp-skeleton-image-height-mobile, 240px);
   }
 
   .wrmp-skeleton-heading {
@@ -594,41 +611,46 @@ body.wrmp-standalone-page .wrmp-menu-content::-webkit-scrollbar-thumb {
   }
 
   .wrmp-menu-section-title {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 
   .wrmp-menu-brand {
-    gap: 10px;
+    gap: 8px;
     align-items: center;
   }
 
   .wrmp-menu-logo {
-    max-width: 42px;
+    width: var(--wrmp-logo-width-mobile, 42px);
+    height: var(--wrmp-logo-height-mobile, auto);
   }
 
   .wrmp-menu-tab {
-    padding: 8px;
-    gap: 8px;
+    padding: 6px;
+    gap: 6px;
     border-radius: 10px;
   }
 
   .wrmp-menu-tab-thumb {
-    height: 100px;
+    height: 72px;
     border-radius: 8px;
-    width: 120px;
   }
 
   .wrmp-menu-tab-text {
-    font-size: 0.82rem;
+    font-size: 0.74rem;
     line-height: 1.3;
   }
 
   .wrmp-contact-label {
-    font-size: 0.7rem;
+    font-size: 0.62rem;
   }
 
   .wrmp-contact-value {
-    font-size: 0.82rem;
+    font-size: 0.72rem;
+  }
+
+  .wrmp-subchip {
+    padding: 4px 10px;
+    font-size: 0.72rem;
   }
 
   .wrmp-product-card {
@@ -640,20 +662,20 @@ body.wrmp-standalone-page .wrmp-menu-content::-webkit-scrollbar-thumb {
   }
 
   .wrmp-product-title {
-    font-size: 1rem;
+    font-size: 0.92rem;
   }
 
   .wrmp-product-price {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
   }
 
   .wrmp-product-description {
-    font-size: 0.88rem;
+    font-size: 0.8rem;
     line-height: 1.6;
   }
 
   .wrmp-menu-section-description {
-    font-size: 0.88rem;
+    font-size: 0.8rem;
     line-height: 1.6;
   }
 }
